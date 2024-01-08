@@ -1,0 +1,16 @@
+//Iniciar el pack.json
+npm init -y
+
+//Instalar dependencias de produccion
+npm i dotenv express promise-mysql
+
+//Instalar dependencias de desarrollo
+npm @babel/cli @babel/core @babel/presets-env morgan nodemon -D
+
+---
+//pack.jeson
+  "scripts": {
+    "babel-node": "babel-node --presets=@babel/preset-env",
+    "dev": "nodemon --exec npm run babel-node src/index.js"
+  },
+---
