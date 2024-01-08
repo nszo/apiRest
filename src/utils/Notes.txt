@@ -14,3 +14,24 @@ npm @babel/cli @babel/core @babel/presets-env morgan nodemon -D
     "dev": "nodemon --exec npm run babel-node src/index.js"
   },
 ---
+
+//ejecutar el servidor
+npm run dev
+
+
+//Que esta usando el puerto 4000
+netstat -ano | findstr :4000
+
+Ej:
+C:\Users\LEANM>netstat -ano | findstr :4000
+  TCP    0.0.0.0:4000           0.0.0.0:0              LISTENING       8560
+  TCP    [::]:4000              [::]:0                 LISTENING       8560
+
+//Finalizar el pid de lo que sea que lo este usando
+taskkill /F /PID 8560
+
+//.env
+HOST=localhost
+DATABASE=apirestd
+USER=root
+PASSWORD=123

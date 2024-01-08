@@ -11,6 +11,7 @@ app.set("port", 4000); // Establecemos el puerto en el que la aplicación escuch
 
 // Middleware
 app.use(morgan("dev")); // Usamos el middleware Morgan para el registro detallado de solicitudes HTTP
+app.use(express.json());
 
 // Configuramos las rutas
 app.use("/api/languages", languageRoutes); // Las rutas definidas en languageRoutes estarán bajo el prefijo "/api/languages"
